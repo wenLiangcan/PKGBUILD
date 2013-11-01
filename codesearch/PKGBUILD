@@ -2,8 +2,8 @@
 
 pkgname=codesearch
 pkgver=0.01
-pkgrel=1
-pkgdesc="Indexed regular expression-based search"
+pkgrel=2
+pkgdesc="Code Search is a tool for indexing and then performing regular expression searches over large bodies of source code. It is a set of command-line programs written in Go."
 arch=('x86_64' 'i686')
 url="https://code.google.com/p/codesearch/"
 license=('BSD 3-Clause')
