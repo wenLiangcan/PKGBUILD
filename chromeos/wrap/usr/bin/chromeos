@@ -6,7 +6,7 @@
 
 CHROME="/opt/chromeos/chrome"
 WMM="matchbox-window-manager -use_titlebar no"
-
+#TTYJS="/usr/bin/tty.js"
 # Custom version string for this release. This can be used to add a downstream
 # vendor string or release channel information.
 export CHROME_VERSION_EXTRA="ubuntu"
@@ -17,7 +17,7 @@ export USER=$(whoami)
 export DATA_DIR=/home/${USER}/chrome-os
 export LOGIN_PROFILE_DIR=${DATA_DIR}/Default
 export LOGNAME=${USER}
-export SHELL=/bin/bash
+export SHELL=/bin/zsh
 export HOME=${DATA_DIR}/user
 
 mkdir -p ${DATA_DIR} && chown ${USER}:${USER} ${DATA_DIR}
@@ -152,6 +152,7 @@ exec $WMM & $CHROME --compress-sys-feedback \
             --enable-gpu-sandbox \
             --allow-webui-compositing \
             --enable-natural-scroll-default \
+            --disable-setuid-sandbox \
             "$REGISTER_PLUGINS" \
             ${ACCELERATED_FLAGS} \
             ${FLASH_FLAGS} \

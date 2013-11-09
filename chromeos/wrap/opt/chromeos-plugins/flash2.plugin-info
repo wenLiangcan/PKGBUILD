@@ -1,0 +1,6 @@
+FILE_NAME=/usr/lib/PepperFlash/libpepflashplayer.so
+PLUGIN_NAME="Shockwave Flash"
+VERSION="11.9.900.117"
+VISIBLE_VERSION="11.9 r900"
+DESCRIPTION="$PLUGIN_NAME $VISIBLE_VERSION"
+MIME_TYPES="application/x-shockwave-flash"
