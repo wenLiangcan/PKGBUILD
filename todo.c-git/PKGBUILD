@@ -22,5 +22,5 @@ build() {
 package() {
 		cd "$srcdir/$name"
 		install -Dm755 "src/todo" "$pkgdir/usr/bin/todo"
-		install -Dm644 "LICENSE-BSD" "$pkgdir/usr/share/licenses/$name/LICENSE"
+		install -Dm644 "LICENSE-BSD" "$pkgdir/usr/share/licenses/$name/LICENSE-BSD"
 }
