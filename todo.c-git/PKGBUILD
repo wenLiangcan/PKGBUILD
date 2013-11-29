@@ -1,9 +1,8 @@
 # Maintainer: wenLiangcan <boxeed@gmail.com>
 # Contributor: Rafael Beraldo <rafaelluisberaldo@gmail.com>
-# Contributor: Bence Horvath <horvathb@me.com>
 
 pkgname=todo.c-git
-pkgver=20131129
+pkgver=20130905
 pkgrel=1
 pkgdesc="Command line lightweight todo tool with readable storage , written in C"
 arch=("any")
@@ -15,9 +14,8 @@ conflicts=('todo.c' 'todo')
 source=("$pkgname"::'git://github.com/hit9/todo.c.git')
 md5sums=('SKIP')
 
-#Learning from PKGBUILD of mono-addins-git
 pkgver() {
-		cd "$srcdir/%pkgname"
+		cd "$srcdir/$pkgname"
 		git log -1 --format='%cd' --date=short | tr -d -- '-'
 }
 
