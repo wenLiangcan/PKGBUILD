@@ -8,7 +8,7 @@ pkgver=2013.11.29
 pkgrel=1
 pkgdesc="A generic framework for creating extensible applications and for creating libraries which extend those applications"
 arch=('i686' 'x86_64')
-url="http://www.mono-project.com/Mono.Addins"
+url="https://github.com/mono/mono-addins"
 license=('custom:MIT')
 depends=('gtk-sharp-2>=2.12.8' 'mono>=2.10.5')
 makedepends=('pkgconfig' 'git')
