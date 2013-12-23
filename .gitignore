@@ -5,3 +5,4 @@ k2pdfopt
 pkg
 src
 *.pkg.tar.xz
+*.src.tar.gz
