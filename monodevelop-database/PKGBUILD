@@ -8,7 +8,7 @@ pkgdesc="Database plugin for monodevelop"
 arch=('i686' 'x86_64')
 url="http://monodevelop.com"
 license=('MIT')
-depends=('gtk-sharp-2' 'monodevelop' 'mono-addins')
+depends=('gtk-sharp-2' 'monodevelop>=4.1.9' 'mono-addins')
 makedepends=('mono')
 source=(http://origin-download.mono-project.com/sources/$pkgname/$pkgname-$_pkgver.tar.bz2)
 md5sums=('2c77c4d33db07b3f4efa15c03464ebdf')
