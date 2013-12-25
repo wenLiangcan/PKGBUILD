@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="Package manager for .NET."
 arch=('x86_64' 'i686')
 url="http://www.nuget.org"
-license=('Other')
+license=('Apache')
 depends=('mono' 'sh')
 source=("http://nuget.org/nuget.exe"
         "${pkgname}")
