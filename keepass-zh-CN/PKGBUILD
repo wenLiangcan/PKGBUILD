@@ -1,0 +1,24 @@
+# Maintainer: wenLiangcan <boxeed@gmail.com>
+# Contributor: Philipp 'TamCore' B. <philipp {at} tamcore {dot} eu>
+
+pkgname=keepass-zh-CN
+lang=Chinese_Simplified
+pkgver=2.24
+pkgrel=1
+pkgdesc="Chinese Simplified locale for keepass"
+arch=(any)
+url="http://keepass.info/translations.html"
+license=('GPL2')
+depends=("keepass")
+makedepends=('unzip')
+source=("https://downloads.sourceforge.net/keepass/KeePass-${pkgver}-${lang}.zip")
+md5sums=('8cf398a14e5822682967c921239e143e')
+
+build() {
+    cd "${srcdir}"
+}
+
+package() {
+   mkdir -p "${pkgdir}/usr/share/keepass"
+   install -m644 "${lang}.lngx" "${pkgdir}/usr/share/keepass"
+}
