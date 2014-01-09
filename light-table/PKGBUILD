@@ -24,7 +24,6 @@ fi
 package() {
     cd "${srcdir}"
     install -Dm644 "${_pkgname}.desktop" "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
-    #cp -r "${_pkgname}" "${pkgdir}/opt/${_pkgname}"
     mkdir -p "${pkgdir}/opt/${_pkgname}"
     mv -T "${_pkgname}" "${pkgdir}/opt/${_pkgname}"
     chmod -R 755 "${pkgdir}/opt/${_pkgname}"
