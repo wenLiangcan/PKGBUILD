@@ -21,7 +21,9 @@ source ~/.gibo-completion.bash
 Copy /etc/gibo/gibo-completion.zsh somewhere (e.g. ~/.gibo-completion.zsh) and put the following in your .zshrc:
 
 source ~/.gibo-completion.zsh
-Alternatively, you can use gibo-completion.zsh as an oh-my-zsh plugin by following these instructions.
+Alternatively, you can use gibo-completion.zsh as an oh-my-zsh plugin by following these instructions:
+    mkdir -p \$ZSH/custom/plugins/gibo/
+    ln -s /path/to/gibo-completion.zsh \$ZSH/custom/plugins/gibo/gibo.plugin.zsh
 EOF
 }
 
