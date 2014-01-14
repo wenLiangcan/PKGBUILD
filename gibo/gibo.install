@@ -8,20 +8,22 @@ Tab completion in bash and zsh:
 
 Copy /etc/gibo/gibo-completion.bash into a bash_completion.d folder:
 
-   -   /etc/bash_completion.d
-   -   /usr/local/etc/bash_completion.d
-   -   ~/bash_completion.d
+    -   /etc/bash_completion.d
+    -   /usr/local/etc/bash_completion.d
+    -   ~/bash_completion.d
 
 or copy it somewhere (e.g. ~/.gibo-completion.bash) and put the following in your .bashrc:
 
-source ~/.gibo-completion.bash
+    source ~/.gibo-completion.bash
 
 >>zsh instructions
 
 Copy /etc/gibo/gibo-completion.zsh somewhere (e.g. ~/.gibo-completion.zsh) and put the following in your .zshrc:
 
-source ~/.gibo-completion.zsh
+    source ~/.gibo-completion.zsh
+
 Alternatively, you can use gibo-completion.zsh as an oh-my-zsh plugin by following these instructions:
+
     mkdir -p \$ZSH/custom/plugins/gibo/
     ln -s /path/to/gibo-completion.zsh \$ZSH/custom/plugins/gibo/gibo.plugin.zsh
 EOF
