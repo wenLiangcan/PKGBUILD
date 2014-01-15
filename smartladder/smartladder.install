@@ -23,5 +23,6 @@ pre_upgrade() {
 
 pre_remove() {
     rm -rf /opt/smartladder/local/certs
+    rm /usr/share/smartladder/CA.crt
     rm -rf /usr/share/smartladder/certs
 }
