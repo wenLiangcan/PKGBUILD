@@ -1,0 +1,12 @@
+[Unit]
+Description=SmartLadder Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+ExecStart=/usr/share/smartladder/smartladder
+
+[Install]
+WantedBy=multi-user.target
+
