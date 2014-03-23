@@ -1,8 +1,8 @@
-# Maintainer: wenLiangcan <boxeed@gmail.com>
+# Maintainer: wenLiangcan <boxeed at gmail dot com>
 
 pkgname=gotags-git
 _pkgname=gotags
-pkgver=20131209
+pkgver=20140313
 pkgrel=1
 pkgdesc="ctags-compatible tag generator for Go."
 arch=("any")
@@ -21,9 +21,6 @@ pkgver() {
 
 build() {
     cd "${_pkgname}"
-    if [ -z "$GOROOT" ] ; then
-        source /etc/profile.d/go.sh
-    fi
     GOPATH=${srcdir} go build -o "${_pkgname}"
 }
 
