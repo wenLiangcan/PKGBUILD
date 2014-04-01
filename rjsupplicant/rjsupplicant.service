@@ -1,0 +1,16 @@
+[Unit]
+Description=start rjsupplicant
+Wants=network.target
+Before=network.target
+
+[Service]
+Type=simple
+#Type=oneshot
+#RemainAfterExit=yes
+ExecStart=/usr/bin/rjsupplicant
+ExecStop=/usr/bin/rjsupplicant -q
+Restart=on-failure
+RestartSec=3
+
+[Install]
+Alias=multi-user.target.wants/rjsupplicant.service

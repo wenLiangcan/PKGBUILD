@@ -1,0 +1,36 @@
+# Maintainer: wenLiangcan <boxeed at gmail dot com>
+
+pkgname=rjsupplicant
+pkgver=1.31
+pkgrel=2
+pkgdesc="Ruijie client for Linux."
+arch=('x86_64' 'i686')
+url=''
+license=('Unkown')
+depends=()
+source=("RG_Supplicant_For_Linux_V1.31.zip"
+        "${pkgname}.sh"
+        "${pkgname}.service")
+md5sums=('67eb37c9b3f21ff788c71ef1a457e4f9'
+         '5be3b5fad7fdfdcd95a1bb2807e0cdce'
+         '0a1406b3d43ca1c650be0d561fca8cf0')
+options=('!strip')
+
+package() {
+    cd "${srcdir}"
+    _arch=""
+    if [[ ${CARCH} == "x86_64" ]]; then
+        _arch="x64"
+    elif [[ ${CARCH} == "i686" ]]; then
+        _arch="x86"
+    fi
+
+    mkdir -p "${pkgdir}/opt/${pkgname}"
+
+    mv -T "${pkgname}/${_arch}" "${pkgdir}/opt/${pkgname}"
+    chmod -R 755 "${pkgdir}/opt/${pkgname}"
+
+    install -Dm755 "${pkgname}.sh" "${pkgdir}/usr/bin/${pkgname}"
+
+    install -Dm644 "${pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+}
