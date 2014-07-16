@@ -1,7 +1,7 @@
 # Maintainer: wenLiangcan <boxeed at gmail dot com>
 
 pkgname=netease-musicbox
-pkgver=0.1.0.5
+pkgver=0.1.0.6
 pkgrel=1
 pkgdesc="A sexy command line interface musicbox 网易云音乐命令行版本"
 url="https://github.com/vellow/NetEase-MusicBox"
@@ -11,7 +11,7 @@ optdepends=('libnotify: desktop notification support')
 license=('MIT')
 arch=('any')
 source=("https://pypi.python.org/packages/source/N/NetEase-MusicBox/NetEase-MusicBox-${pkgver}.tar.gz")
-md5sums=('b82c1eca4dbe23c06ad813ee7ac8b64b')
+md5sums=('4b7a709c0270f0cc6ba5f78b431ddeaa')
 install="${pkgname}.install"
 
 build() {
