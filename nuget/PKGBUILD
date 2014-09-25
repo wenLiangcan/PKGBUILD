@@ -16,5 +16,5 @@ install="${pkgname}.install"
 
 package() {
     install -Dm755 "${pkgname}.exe" "${pkgdir}/opt/${pkgname}/${pkgname}.exe"
-	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+    install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 }
