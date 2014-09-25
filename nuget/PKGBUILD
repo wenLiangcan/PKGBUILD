@@ -14,11 +14,7 @@ md5sums=('16c6835c572b933863cdd4116cefecda'
          '7d52a5ad1c8ba770f57940457c26644f')
 install="${pkgname}.install"
 
-build() {
-	cd "${srcdir}"
-}
-
 package() {
-	install -Dm755 "${pkgname}.exe" "${pkgdir}/opt/${pkgname}/${pkgname}.exe"
+    install -Dm755 "${pkgname}.exe" "${pkgdir}/opt/${pkgname}/${pkgname}.exe"
 	install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 }
