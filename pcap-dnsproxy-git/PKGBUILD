@@ -3,7 +3,7 @@
 pkgname=pcap-dnsproxy-git
 _pkgname=pcap-dnsproxy
 pkgver=20150505
-pkgrel=1
+pkgrel=2
 pkgdesc="A local DNS server base on WinPcap and LibPcap."
 arch=("any")
 url="https://github.com/chengr28/Pcap_DNSProxy"
@@ -47,5 +47,5 @@ package() {
     find . -type f -exec install -Dm644 {} \
         "${pkgdir}/usr/share/doc/${_pkgname}/{}" \;
 
-    install -Dm0644 "${srcdir}/${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
+    install -Dm644 "${srcdir}/${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
 }
